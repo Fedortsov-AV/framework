@@ -1,11 +1,11 @@
 class Request:
 
     def __init__(self, environ):
-        self.path_info = environ.get('PATH_INFO')
+        self.path = environ.get('PATH_INFO')
         self.query_string = self._get_query_string(environ)
         self.addres = self._get_address(environ)
         self.headers = self._get_headers(environ)
-        self.request_method = Fenviron.get('REQUEST_METHOD')
+        self.request_method = environ.get('REQUEST_METHOD')
         self.request_uri = environ.get('REQUEST_URI')
         self.script_name = environ.get('SCRIPT_NAME')
         self.server = self._get_server_info(environ)

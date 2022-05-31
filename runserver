@@ -2,8 +2,9 @@
 import sys
 import os
 
+PYTHON_PATH = sys.executable
 
 file_path = sys.path[0]+'\server.py'
 
-code_exit = os.startfile(f'{file_path}')
-print(code_exit)
+# os.system(f'{PYTHON_PATH} {file_path}')
+os.startfile(f'{file_path}')

@@ -1,5 +1,5 @@
 from waitress import serve
-from wsgi import app
+from common.wsgi import app
 
 if __name__ == "__main__":
-    serve(app, host="localhost", port=8000)
+    serve(app, host="localhost", port=8035)
